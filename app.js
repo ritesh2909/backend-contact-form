@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 });
 app.use('/user-form',userRoutes);
 
-mongoose.connect("mongodb+srv://sukhvinder:ankit1234@cluster0.zbups.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://ritesh:ritesh2909@cluster0.eaoyv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 .then(result=>{
   console.log("connected");
   app.listen(8080);

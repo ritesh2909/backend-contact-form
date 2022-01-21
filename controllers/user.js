@@ -7,7 +7,7 @@ const app=express();
 
 const transporter=nodemailer.createTransport(sendgridTransport({
   auth:{
-    api_key:'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'
+    api_key:'YOUR API KEY FOR SENDGRID'
   }
 }));
 exports.getData=(req,res,next)=>{
@@ -48,15 +48,9 @@ exports.postData=(req,res,next)=>{
       message:'added successfully',
       post:result
     })
-    return transporter.sendMail({
-      to:email,
-      from:'ritesharora2909@gmail.com',
-      subject:'Form filled Successfully',
-      html:'<h1>Thank you for filling form</h1>'
-    }).then(sent=>{
-      console.log("email sent");
-    }).catch(err=>{
+ 
+  }).catch(err=>{
     console.log(err);
   });
-})
+
 }
